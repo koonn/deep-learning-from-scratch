@@ -1,25 +1,27 @@
 """活性化関数
 """
 
-def step_function(x1, x2):
+def step_function(x):
     """ステップ関数
 
     Args:
-        x1: 変数1の入力値
-        x2: 変数2の入力値
+        x: 入力値
 
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
     """
-    pass
+    if x > 0:
+        return 1
+    else:
+        return 0
 
 
-def sigmoid_function(x1, x2):
+
+def sigmoid_function(x):
     """シグモイド関数
 
     Args:
-        x1: 変数1の入力値
-        x2: 変数2の入力値
+        x: 入力値
 
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
@@ -27,12 +29,11 @@ def sigmoid_function(x1, x2):
     pass
 
 
-def relu_function(x1, x2):
+def relu_function(x):
     """ReLU
 
     Args:
-        x1: 変数1の入力値
-        x2: 変数2の入力値
+        x: 入力値
 
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
