@@ -5,7 +5,7 @@ def step_function(x):
     """ステップ関数
 
     Args:
-        x: 入力値
+        x(float): 入力値
 
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
