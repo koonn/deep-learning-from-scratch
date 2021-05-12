@@ -1,20 +1,23 @@
 """活性化関数
 """
 
+import numpy as np
+
+
 def step_function(x):
     """ステップ関数
 
     Args:
-        x(float): 入力値
+        x(np.array): 入力値
 
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
     """
-    if x > 0:
-        return 1
-    else:
-        return 0
+    # xの要素が0より大ならTrue/そうでなければFalseに変換
+    y = x > 0
 
+    # Trueを1, Falseを0のフラグに変換
+    return y.astype(np.int)
 
 
 def sigmoid_function(x):
