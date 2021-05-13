@@ -29,7 +29,7 @@ def sigmoid_function(x):
     Returns: 活性化関数によって変換した出力値shuturyokuatai
 
     """
-    pass
+    return 1 / (1 + np.exp(-x))
 
 
 def relu_function(x):
