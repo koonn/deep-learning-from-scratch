@@ -10,7 +10,7 @@ def step_function(x):
     Args:
         x(np.array): 入力値
 
-    Returns: 活性化関数によって変換した出力値shuturyokuatai
+    Returns: 活性化関数によって変換した出力値
 
     """
     # xの要素が0より大ならTrue/そうでなければFalseに変換
@@ -24,9 +24,9 @@ def sigmoid_function(x):
     """シグモイド関数
 
     Args:
-        x: 入力値
+        x(np.array): 入力値
 
-    Returns: 活性化関数によって変換した出力値shuturyokuatai
+    Returns: 活性化関数によって変換した出力値
 
     """
     return 1 / (1 + np.exp(-x))
@@ -36,9 +36,9 @@ def relu_function(x):
     """ReLU
 
     Args:
-        x: 入力値
+        x(np.array): 入力値
 
-    Returns: 活性化関数によって変換した出力値shuturyokuatai
+    Returns: 活性化関数によって変換した出力値
 
     """
     pass
