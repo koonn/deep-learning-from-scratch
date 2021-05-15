@@ -44,4 +44,4 @@ def relu_function(x):
     Returns: 活性化関数によって変換した出力値
 
     """
-    pass
+    return np.maximum(0, x)  # xと0の大きい方を返す
