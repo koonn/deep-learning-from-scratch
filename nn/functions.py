@@ -45,3 +45,16 @@ def relu_function(x):
 
     """
     return np.maximum(0, x)  # xと0の大きい方を返す
+
+
+def identity_function(x):
+    """
+    恒等関数
+
+    Args:
+        x(np.array): 入力値
+
+    Returns: 入力値と同じ配列
+
+    """
+    return x
