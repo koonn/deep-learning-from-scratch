@@ -5,7 +5,8 @@ import numpy as np
 
 
 def step_function(x):
-    """ステップ関数
+    """
+    ステップ関数
 
     Args:
         x(np.array): 入力値
@@ -21,7 +22,8 @@ def step_function(x):
 
 
 def sigmoid_function(x):
-    """シグモイド関数
+    """
+    シグモイド関数
 
     Args:
         x(np.array): 入力値
@@ -33,7 +35,8 @@ def sigmoid_function(x):
 
 
 def relu_function(x):
-    """ReLU
+    """
+    ReLU関数
 
     Args:
         x(np.array): 入力値
