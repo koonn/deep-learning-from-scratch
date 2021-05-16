@@ -69,7 +69,9 @@ def softmax(x):
     Returns: 入力信号をSoftmaxで変換した配列
 
     """
-    exp_x = np.exp(x)
+    c = np.max(x)
+
+    exp_x = np.exp(x - c)  # オーバーフロー対策
     sum_exp_x = np.sum(exp_x)
 
     y = exp_x / sum_exp_x
