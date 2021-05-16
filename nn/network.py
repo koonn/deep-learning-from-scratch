@@ -2,7 +2,7 @@
 """
 
 import numpy as np
-from nn.functions import sigmoid_function, identity_function
+from nn.functions import sigmoid, identity
 
 
 def init_network():
@@ -13,14 +13,14 @@ def init_network():
         Dict: ネットワークのDict
 
     """
-    network = {}
-
-    network['W1'] = np.random.rand(2, 3)
-    network['B1'] = np.random.rand(1, 3)
-    network['W2'] = np.random.rand(3, 2)
-    network['B2'] = np.random.rand(1, 2)
-    network['W3'] = np.random.rand(2, 2)
-    network['B3'] = np.random.rand(1, 2)
+    network = {
+        'W1': np.random.rand(2, 3),
+        'B1': np.random.rand(1, 3),
+        'W2': np.random.rand(3, 2),
+        'B2': np.random.rand(1, 2),
+        'W3': np.random.rand(2, 2),
+        'B3': np.random.rand(1, 2),
+        }
 
     return network
 
@@ -42,14 +42,14 @@ def forward(network, x):
 
     # 1層目
     a1 = np.dot(x, w1) + b1
-    z1 = sigmoid_function(a1)
+    z1 = sigmoid(a1)
 
     # 2層目
     a2 = np.dot(z1, w2) + b2
-    z2 = sigmoid_function(a2)
+    z2 = sigmoid(a2)
 
     # 3層目
     a3 = np.dot(z2, w3) + b3
-    y = identity_function(a3)
+    y = identity(a3)
 
     return y
