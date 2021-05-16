@@ -58,3 +58,21 @@ def identity(x):
 
     """
     return x
+
+
+def softmax(x):
+    """
+
+    Args:
+        x(np.array): 入力値
+
+    Returns: 入力信号をSoftmaxで変換した配列
+
+    """
+    exp_x = np.exp(x)
+    sum_exp_x = np.sum(exp_x)
+
+    y = exp_x / sum_exp_x
+
+    return y
+
