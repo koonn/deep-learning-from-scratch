@@ -4,7 +4,7 @@
 import numpy as np
 
 
-def step_function(x):
+def step(x):
     """
     ステップ関数
 
@@ -21,7 +21,7 @@ def step_function(x):
     return y.astype(np.int)
 
 
-def sigmoid_function(x):
+def sigmoid(x):
     """
     シグモイド関数
 
@@ -34,7 +34,7 @@ def sigmoid_function(x):
     return 1 / (1 + np.exp(-x))
 
 
-def relu_function(x):
+def relu(x):
     """
     ReLU関数
 
@@ -47,7 +47,7 @@ def relu_function(x):
     return np.maximum(0, x)  # xと0の大きい方を返す
 
 
-def identity_function(x):
+def identity(x):
     """
     恒等関数
 
