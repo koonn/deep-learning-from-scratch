@@ -27,6 +27,13 @@ def cross_entropy_error(y, t):
     Returns:
         float: 交差エントロピー誤差の値
     """
-    delta = 1e-7
+    # 一次元の場合は、形式を変更する(ndimは次元数(shapeの要素数))
+    # 多次元配列と同じ形式に直して誤差計算を行えるようにするため
+    if y.ndim == 1:
+        t = t.reshape(1, y.size)  # shapeが(t.size,)の配列を、(1, t.size)に変換
+        y = y.reshape(1, y.size)  # shapeが(y.size,)の配列を、(1, y.size)に変換
 
-    return -np.sum(t * np.log(y + delta))
+    batch_size = y.shape[0]
+
+    delta = 1e-7  # yが0のときに-∞に発散しないように加算する定数
+    return -np.sum(t * np.log(y + delta)) / batch_size
