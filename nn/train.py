@@ -53,3 +53,29 @@ def numerical_gradient(f, x):
         x[idx] = tmp_val #値を元に戻す
 
     return grad
+
+
+def gradient_descent(
+        f,
+        init_x,
+        lr=0.01,
+        step_num=100):
+    """
+
+    Args:
+        f: 関数
+        init_x (np.array): xの初期値
+        lr: 学習率
+        step_num: ステップ数
+
+    Returns:
+        関数が最小値をとるときのパラメータ(十分学習できていれば)
+    """
+    x = init_x
+
+    for i in range(step_num):
+        grad = numerical_gradient(f, x)
+
+        x -= lr * grad
+
+    return x
