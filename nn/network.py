@@ -2,7 +2,9 @@
 """
 
 import numpy as np
-from nn.functions import sigmoid, identity
+from nn.functions import sigmoid, identity, softmax
+from nn.loss_functions import cross_entropy_error
+from nn.train import numerical_gradient
 
 
 def init_network():
@@ -53,3 +55,18 @@ def forward(network, x):
     y = identity(a3)
 
     return y
+
+
+class simpleNet:
+    def __init__(self):
+        self.W = np.random.randn(2, 3)  # ガウス分布で初期化
+
+    def predict(self, x):
+        return np.dot(x, self.W)
+
+    def loss(self, x, t):
+        z = self.predict(x)
+        y = softmax(z)
+        loss = cross_entropy_error(y, t)
+
+        return loss
